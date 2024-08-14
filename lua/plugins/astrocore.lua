@@ -62,6 +62,10 @@ return {
 
         -- home key fix
         ["<Home>"] = {"^"},
+        
+        -- buffer control
+        ["<C-8>"] = {":bprevious<CR>"},
+        ["<C-7>"] = {":bnext<CR>"},
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
