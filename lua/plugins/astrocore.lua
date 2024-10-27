@@ -61,16 +61,14 @@ return {
         },
 
         -- home key fix
-        ["<Home>"] = {"^"},
-        
-        -- buffer control
-        ["<C-7>"] = {":bprevious<CR>"},
-        ["<C-8>"] = {":bnext<CR>"},
+        ["<Home>"] = { "^" },
 
-        
-        ["<F7>"] = {":ToggleTerm direction=float<CR>"},
-        
-        
+        -- buffer control
+        ["<C-7>"] = { ":bprevious<CR>" },
+        ["<C-8>"] = { ":bnext<CR>" },
+
+        ["<F7>"] = { ":ToggleTerm direction=float<CR>" },
+
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
@@ -78,8 +76,9 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
-      i = {
-        
+      i = {},
+      t = {
+        ["<C-p>"] = { "<C-\\><C-n>" },
       },
     },
   },
