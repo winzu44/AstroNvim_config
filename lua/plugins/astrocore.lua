@@ -63,6 +63,9 @@ return {
         -- home key fix
         ["<Home>"] = { "^" },
 
+        -- end key fix
+        ["<End>"] = { "g_" },
+
         -- buffer control
         ["<C-7>"] = { ":bprevious<CR>" },
         ["<C-8>"] = { ":bnext<CR>" },
@@ -76,9 +79,21 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
-      i = {},
+      i = {
+        -- home key fix
+        ["<Home>"] = { "<Esc>^i" },
+
+        -- end key fix
+        ["<End>"] = { "<Esc>g_a" },
+      },
       t = {
         ["<C-p>"] = { "<C-\\><C-n>" },
+      },
+      v = {
+        -- home key fix
+        ["<Home>"] = { "^" },
+        -- end key fix
+        ["<End>"] = { "g_" },
       },
     },
   },

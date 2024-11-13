@@ -4,8 +4,16 @@ return { -- override nvim-cmp plugin
   opts = function(_, opts)
     -- opts parameter is the default options table
     -- the function is lazy loaded so cmp is able to be required
-    local cmp = require("cmp")
+    local cmp = require "cmp"
     -- modify the mapping part of the table
-    opts.mapping["<Tab>"] = cmp.mapping.confirm({ select = true })
+    opts.mapping["<Tab>"] = cmp.mapping.confirm { select = true }
+    cmp.setup {
+      formatting = {
+        format = function(entry, vim_item)
+          vim_item.abbr = vim.fn.strcharpart(vim_item.abbr, 0, 10)
+          return vim_item
+        end,
+      },
+    }
   end,
 }
